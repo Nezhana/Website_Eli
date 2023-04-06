@@ -1514,3 +1514,9 @@ input[type=button]:active {
 .footer-right p{
     margin: 0;
 }
+
+@media screen and (min-width: 420px) {
+    .footer__inner .footer-left, .footer-right {
+        width: 60%;
+    }
+}
