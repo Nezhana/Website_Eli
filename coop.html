@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ua">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="...">
+        <meta name="description" content="...">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Landing</title>
+        <link rel="stylesheet" media="only screen and (max-width: 428px)" href="assets/css/style_phone.css"/>
+        <link rel="stylesheet" media="only screen and (max-width: 1024px) and (min-width: 429px)" href="assets/css/style_1024.css"/>
+        <link rel="stylesheet" media="screen and (min-width: 1025px)" href="assets/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="header" id="myHeader">
+            <div class="header__inner">
+                <nav class="header__nav__left">
+                    <a class="nav__link" href="index.html">Home</a>
+                    <a class="nav__link" href="index.html#about-page">Про мене</a>
+                    <a class="nav__link" href="index.html#player-page">Кавери</a>
+                    <a class="nav__link" href="index.html#goals-page">Досягнення</a>
+                </nav>
+                <div class="logo"><img src="assets/images/logo.png"></div>
+                <nav class="header__nav__right">
+                    <a class="nav__link" href="coop.html">Співпраця</a>
+                    <a class="nav__link" href="video.html">Кліпи</a>
+                </nav>
+                <div class="burger-menu" id="burgerMenu">
+                    <a href="" class="burger-menu_button">
+                        <spun class="burger-menu_lines"></spun>
+                    </a>
+                    <nav class="burger-menu_nav">
+                        <a href="index.html" class="burger-menu_link">Home</a>
+                        <a href="index.html#about-page" class="burger-menu_link">Про мене</a>
+                        <a href="index.html#player-page" class="burger-menu_link">Кавери</a>
+                        <a href="index.html#goals-page" class="burger-menu_link">Досягнення</a>
+                        <a href="coop.html" class="burger-menu_link">Співпраця</a>
+                        <a href="video.html" class="burger-menu_link">Кліпи</a>
+                    </nav>
+                    <div class="burger-menu_overlay"></div>
+                </div>
+                <script>
+                    var menu = document.querySelector("#burgerMenu");
+                    var btn = document.querySelector(".burger-menu_button");
+                    var links = document.querySelectorAll(".burger-menu_link");
+                    var overlay = document.querySelector('.burger-menu_overlay');
+
+                    btn.addEventListener('click', (e) => {
+                        console.log('Clicked');
+                        e.preventDefault();
+                        menu.classList.toggle('burger-menu_active');
+                        
+                        for(let i=0; i < links.length; i++) {
+                            links[i].onclick = function() {
+                                menu.classList.toggle('burger-menu_active');
+                            }
+                        }
+
+                        overlay.onclick = function() {
+                            menu.classList.toggle('burger-menu_active');
+                        };
+                    });
+                </script>
+            </div>
+        </header>
+
+        <main>
+            <section class="coop-section">
+                <div class="coop-page">
+                    <div class="coop-content">
+                        <div class="back-content">
+                            <div class="back-info">
+                                <h2>Співпраця</h2>
+                                <p>Бажаєте створити спільний проект?</p>
+                                <p>Заповніть форму та залиште коментар з Вашою ідеєю.</p>
+                                <p>Давайте здійснювати наші мрії разом!</p>
+                            </div>
+                        </div>
+                        <div class="front-content">
+                            <div class="front-form">
+                                <form action="action_page.php">
+                                    <input type="text" id="fname" name="firstname" placeholder="Ваше ім’я">
+                                    <input type="text" id="email" name="email" placeholder="Ваш Email">
+                                    <textarea id="comm" name="comment" placeholder="Коментар з Вашими ідеями" style="height:100px"></textarea>
+                                </form>
+                            </div>
+                            <div class="front-btn">
+                                <input type="button" value="Надіслати повідомлення" onClick='location.href="coop-done.html"'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__inner">
+                <div class="footer-left">
+                    <h2>Інформація</h2>
+                    <a href="#">Авторське право</a>
+                    <a href="#">Співпраця</a>
+                </div>
+                <div class="footer-left soc-media">
+                    <h2>Social Media</h2>
+                    <div class="soc-media-links">
+                        <a href="#">YouTube</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                    <div class="soc-media-links">
+                        <a href="#">SoundCloud</a>
+                        <a href="#">Telegram</a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <h2>Email</h2>
+                    <p>eli.shemirs@gmail.com</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

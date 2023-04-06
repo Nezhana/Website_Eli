@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ua">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="...">
+        <meta name="description" content="...">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Landing</title>
+        <link rel="stylesheet" media="only screen and (max-width: 428px)" href="assets/css/style_phone.css"/>
+        <link rel="stylesheet" media="only screen and (max-width: 1024px) and (min-width: 429px)" href="assets/css/style_1024.css"/>
+        <link rel="stylesheet" media="screen and (min-width: 1025px)" href="assets/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        
+
+        <header class="header" id="myHeader">
+            <div class="header__inner">
+                <nav class="header__nav__left">
+                    <a class="nav__link" href="#intro-section">Home</a>
+                    <a class="nav__link" href="#about-page">Про мене</a>
+                    <a class="nav__link" href="#player-page">Кавери</a>
+                    <a class="nav__link" href="#goals-page">Досягнення</a>
+                </nav>
+                <div class="logo"><img src="assets/images/logo.png"></div>
+                <nav class="header__nav__right">
+                    <a class="nav__link" href="coop.html">Співпраця</a>
+                    <a class="nav__link" href="video.html">Кліпи</a>
+                </nav>
+                <div class="burger-menu" id="burgerMenu">
+                    <a href="" class="burger-menu_button">
+                        <spun class="burger-menu_lines"></spun>
+                    </a>
+                    <nav class="burger-menu_nav">
+                        <a href="#intro-section" class="burger-menu_link">Home</a>
+                        <a href="#about-page" class="burger-menu_link">Про мене</a>
+                        <a href="#player-page" class="burger-menu_link">Кавери</a>
+                        <a href="#goals-page" class="burger-menu_link">Досягнення</a>
+                        <a href="coop.html" class="burger-menu_link">Співпраця</a>
+                        <a href="video.html" class="burger-menu_link">Кліпи</a>
+                    </nav>
+                    <div class="burger-menu_overlay"></div>
+                </div>
+                <script>
+                    var menu = document.querySelector("#burgerMenu");
+                    var btn = document.querySelector(".burger-menu_button");
+                    var links = document.querySelectorAll(".burger-menu_link");
+                    var overlay = document.querySelector('.burger-menu_overlay');
+
+                    btn.addEventListener('click', (e) => {
+                        console.log('Clicked');
+                        e.preventDefault();
+                        menu.classList.toggle('burger-menu_active');
+                        
+                        for(let i=0; i < links.length; i++) {
+                            links[i].onclick = function() {
+                                menu.classList.toggle('burger-menu_active');
+                            }
+                        }
+
+                        overlay.onclick = function() {
+                            menu.classList.toggle('burger-menu_active');
+                        };
+                    });
+                </script>
+            </div>
+        </header>
+
+        <main>
+            <section id="intro-section">
+                <div class="intro">
+                    <div class="intro-left-block">
+                        <div class="intro-text">
+                            <h2 class="intro-text-name">Моє ім’я - </h2>
+                            <h2 class="intro-text-name-accent">Елі</h2>
+                            <div class="intro-left-logo">
+                                <img src="assets/images/intro_left_logo.png">
+                            </div>
+                            <h3 class="intro-text-tagline">Вітаю вас у моєму просторі музики!</h3>
+                        </div>
+                    </div>
+                    <div class="model-main">
+                        <img src="assets/images/HD_model_dark1.png" alt="model" class="model">
+                        <img src="assets/images/HD_model_dark1_tablet.png" alt="model-tablet" class="model-tablet">
+                    </div>
+                    <div class="model-overlay">
+                        <img src="assets/images/overlay.png" alt="overlay">
+                    </div>
+                </div>
+            </section>
+
+            <div class="separetor">
+                <h2 class="separetor-text">Давайте трохи розповім вам про те, чим я займаюсь...</h2>
+            </div>
+    
+            <section id="about-page">
+                <div class="about">
+                    <div class="about-left-block">
+                        <div class="about-text">
+                            <div class="about-title">
+                                <h3>Про мене</h3>
+                                <img src="assets/images/Vector.png">
+                            </div>
+                            <div class="about-body">
+                                <p> Мене звати Елі (Eli). Я початкова виконавиця, створюю кавери на улюблені пісні та мрію написати власну!</p>
+                                <p>Жанри, які подобаються мені найбільше - ліричні пісні, рок, джаз, альтернативна/інді танцювальна музика.</p>
+                                <div class="bottom-wrap">
+                                    <p class="left-wrap">Виконавці, що надихають мене - Melanie Martinez, Vivienne Mort, Ellise, Metallica, Five Finger Death Punch, Nirvana, Billie Eilish.</p>
+                                    <p class="left-wrap">Я відношу себе до меломанів, тому від мене ви можете почути найрізноманітніші композиції та обрати те, що сподобається. Дякую за увагу! ♡</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-right-block">
+                        <img src="assets/images/aboutPhoto.png">
+                    </div>
+                </div>
+    
+            </section>
+
+            <div class="separetor">
+                <h2 class="separetor-text">Пропоную послухати мої кавери :</h2>
+            </div>
+    
+            <section id="player-page">
+                <div class="player">
+                    <div class="player-block">
+                        <div class="player-content">
+                            <div class="player-title">
+                                <h2>Creep</h2>
+                                <h3>Radiohead</h3>
+                            </div>
+                            <div class="player-bars">
+                                <svg id="playIcon" width="64" height="64" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="36.1522" cy="36.1522" r="24.8135" transform="rotate(45 36.1522 36.1522)" stroke="white" stroke-width="1.5" stroke-dasharray="19.66 7.87"/>
+                                    <path d="M46.3594 36.8017L47.4844 36.1522L46.3594 35.5027L31.6112 26.9878L30.4862 26.3383L30.4862 27.6373L30.4862 44.667L30.4862 45.9661L31.6112 45.3166L46.3594 36.8017Z" stroke="white" stroke-width="1.5"/>
+                                </svg>
+                                <div class="play-bar">
+                                    <div class="slide-play-container">
+                                        <input type="range" min="1" max="100" value="20" class="slider-play" id="rangePlay">
+                                        <script async src="playBarScript.js"></script>
+                                    </div>
+                                    <p>1:24</p>
+                                </div>
+                                <div class="volume-bar">
+                                    <svg id="volumeIcon" width="48" height="42" viewBox="0 0 52 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.30444 18.8386V27.0388" stroke="white" stroke-width="0.979128"/>
+                                        <path d="M9.62695 11.0059L9.62695 34.9945" stroke="white" stroke-width="0.979128"/>
+                                        <path d="M17.9497 16.6357L17.9497 29.3644" stroke="white" stroke-width="0.979128"/>
+                                        <path d="M26.2722 8.06787L26.2722 37.9313" stroke="white" stroke-width="0.979128"/>
+                                        <path d="M34.5947 0.235352L34.5947 45.7648" stroke="white" stroke-width="0.979128"/>
+                                        <path d="M42.9174 13.9431L42.9174 32.057" stroke="white" stroke-width="0.979128"/>
+                                        <path d="M51.24 18.8386L51.24 27.1612" stroke="white" stroke-width="0.979128"/>
+                                    </svg>
+                                    <div class="slide-volume-container">
+                                        <input type="range" min="1" max="100" value="50" class="slider-volume" id="rangeVolume">
+                                        <script async src="volumeBarScript.js"></script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="player-playlist" id="playlist">
+                                <div class="playlist-flex" id="parentBoxes">
+                                    <div class="play-boxes play-boxes-visible">
+                                        <h3>Talking to the moon</h3>
+                                        <p>Bruno Mars</p>
+                                    </div>
+                                    <div class="play-boxes play-boxes-visible">
+                                        <h3>Talking to the moon</h3>
+                                        <p>Bruno Mars</p>
+                                    </div>
+                                    <div class="play-boxes play-boxes-visible">
+                                        <h3>Cry baby</h3>
+                                        <p>Melanie Martinez</p>
+                                    </div>
+                                    <div class="play-boxes play-boxes-visible">
+                                        <h3>Rape me</h3>
+                                        <p>Nirvana</p>
+                                    </div>
+                                    <div class="play-boxes play-boxes-visible">
+                                        <h3>King</h3>
+                                        <p>Lilith Czar</p>
+                                    </div>
+                                    <div class="play-boxes">
+                                        <h3>House on a hill</h3>
+                                        <p>The Pretty Reckless</p>
+                                    </div>
+                                    <div class="play-boxes">
+                                        <h3>House on a hill</h3>
+                                        <p>The Pretty Reckless</p>
+                                    </div>
+                                    <script>
+                                        var elm = document.querySelector("#playlist");
+                                        const elements = document.getElementsByClassName("play-boxes");
+                                        // const leftBorder = elm.offsetLeft + elements[0].clientWidth/1.5;
+                                        // const rightBorder = elm.offsetLeft + elm.clientWidth - elements[0].clientWidth;
+                                        const leftBorder = window.innerWidth - elm.clientWidth - 24;
+                                        const rightBorder = window.innerWidth;
+
+                                        console.log(elm.className)
+                                        console.log(elements)
+                                        elm.addEventListener("scroll", () => {
+                                            console.log("Scrolled!")
+                                            for(let i=0; i < elements.length; i++) {
+                                                var currentElement = elements[i]
+                                                var leftElement = currentElement.getBoundingClientRect().left;
+                                                var rightElement = currentElement.getBoundingClientRect().right;
+                                                console.log(i, leftElement, leftBorder, rightElement, rightBorder)
+                                                if (rightBorder > rightElement && leftBorder < leftElement) {
+                                                    currentElement.style.opacity = 1;
+                                                } else {
+                                                    currentElement.style.opacity = 0;
+                                                }
+                                            }
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+            </section>
+
+            <div class="separetor">
+                <h2 class="separetor-text">Мої досягнення. Що вже зроблено і що нас очікує...</h2>
+            </div>
+    
+            <section id="goals-page">
+                <div class="goals">
+                    <div class="goals-content">
+                        <div class="goals-inner">
+                            <h2>Це лише початок ...</h2>
+                            <div class="achievements">
+                                <div class="goals-box">
+                                    <img src="assets/images/iconCovers.png">
+                                    <div>
+                                        <h2>24</h2>
+                                        <p>кавера</p>
+                                    </div>
+                                </div>
+                                <div class="goals-box">
+                                    <img src="assets/images/iconVideo.png">
+                                    <div>
+                                        <h2>16</h2>
+                                        <p>кліпів</p>
+                                    </div>
+                                </div>
+                                <div class="goals-box">
+                                    <img src="assets/images/iconExp.png">
+                                    <div>
+                                        <h2>3</h2>
+                                        <p>роки досвіду</p>
+                                    </div>
+                                </div>
+                                <div class="another">
+                                    <div></div>
+                                    <span>
+                                        <p>Оновлення контенту кожен тиждень</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goals-btn">
+                            <svg id="svgBtn" width="500" height="80" viewBox="0 0 520 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 99V33.9142L33.9142 1H519V66.5858L486.586 99H1Z" stroke="white" stroke-width="2"/>
+                            </svg>
+                            <button onClick='location.href="video.html"'>
+                                <p>Переглянути кліпи</p>
+                                <svg id="svgArrow" width="210" height="24" viewBox="0 0 218 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 16H215.5M215.5 16L196.5 1M215.5 16L196.5 31" stroke="white" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__inner">
+                <div class="footer-left">
+                    <h2>Інформація</h2>
+                    <a href="#">Авторське право</a>
+                    <a href="#">Співпраця</a>
+                </div>
+                <div class="footer-left soc-media">
+                    <h2>Social Media</h2>
+                    <div class="soc-media-links">
+                        <a href="#">YouTube</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                    <div class="soc-media-links">
+                        <a href="#">SoundCloud</a>
+                        <a href="#">Telegram</a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <h2>Email</h2>
+                    <p>eli.shemirs@gmail.com</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
