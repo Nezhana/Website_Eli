@@ -4,7 +4,7 @@ from django.db import models
 
 class Cooperation(models.Model):
     firstname = models.CharField('Name', max_length=50)
-    email = models.CharField('Email', max_length=100)
+    email = models.EmailField('Email')
     comment = models.TextField('Comment')
 
     def __str__(self):
