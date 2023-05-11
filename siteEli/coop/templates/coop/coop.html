@@ -19,7 +19,7 @@
                         <form method='post'>
                             {% csrf_token %}
                             {{ form.firstname }}
-                            {{ form.email }}
+                            {{ form_2.email }}
                             {{ form.comment }}
                             <button type="submit" class="front-btn">Надіслати повідомлення</button>
                         </form>
