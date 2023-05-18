@@ -93,9 +93,25 @@
                             {% if video.id == page_obj.number %}
                                 <h2>{{ video.title }}</h2>
                                 <p>{{ video.desc }}<br>
-                                Текст: {{ video.text }}.<br>
-                                Музичний супровід: {{ video.music }}.<br>
-                                Вокал: {{ video.vocal }}.</p>
+                                Текст: {{ video.text }}<br>
+                                Музичний супровід:
+                                {% for cover in allCovers%}
+                                    {% if cover.title == video.title %}
+                                        {% for author in cover.covers.all %}
+                                            {% if cover.covers.count == 1 %}
+                                                {{ author.name }}
+                                            {% elif cover.covers.count > 1 %}
+                                                {% if author.id == cover.covers.count %}
+                                                    {{ author.name }}
+                                                {% elif author.id != cover.covers.count %}
+                                                    {{ author.name }},
+                                                {% endif %}
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                                <br>
+                                Вокал: {{ video.vocal }}</p>
                             {% endif %}
                         {% endfor %}
                     </div>

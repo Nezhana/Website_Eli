@@ -13,3 +13,18 @@ class Video(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Cover(models.Model):
+    title = models.CharField('Назва', max_length=50)
+
+    def __str__(self):
+        return self.title
+
+
+class Performer(models.Model):
+    name = models.CharField('Ім\'я', max_length=50)
+    cover = models.ManyToManyField(Cover, related_name="covers")
+
+    def __str__(self):
+        return self.name
